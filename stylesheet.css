@@ -1,0 +1,162 @@
+:root {
+    /* Colors */
+    --card-body: hsl(0, 0%, 100%);
+    --bg-clr: hsl(30, 38%, 92%);
+    --text-clr: hsl(228, 12%, 48%);
+    --accent-clr: hsl(158, 36%, 37%);
+    --heading-clr: hsl(212, 21%, 14%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-clr);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: var(--text-clr)
+}
+
+.product-title {
+    color: var(--text-clr);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 2;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--heading-clr);
+    line-height: 2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-card {
+    display: flex;
+    width: 600px;
+    background-color: var(--card-body);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product-image {
+    flex-basis: 160%;
+}
+
+.product-details {
+    flex-basis: 140%;
+    padding-inline: 2rem;
+    padding-block-start: 2rem;
+}
+
+.product-description {
+    line-height: 22px;
+    padding-top: 20px
+}
+
+.price {
+    display: flex;
+}
+
+.sale-price {
+    color: var(--accent-clr);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+.original-price {
+    margin-left: 1rem;
+    color: var(--text-clr);
+    font-weight: 500;
+    padding-top: 30.8px;
+    text-decoration: line-through;
+}
+
+.button {
+    margin-top: 1.5rem;
+    display: flex;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 5px;
+    border-color: transparent;
+    padding-inline: 30px;
+    padding-block: 12px;
+    min-width: 100%;
+    color: hsl(0, 0%, 100%);
+    justify-content: center;
+    align-content: space-between;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+button:hover, .button:focus-visible {
+    background-color: hsl(158, 22%, 25%);
+    cursor: pointer;
+}
+
+.attribution {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    body {
+      min-height: 100vh;
+    }
+    .main {
+      padding-inline: 1rem;
+    }
+  
+    .article-card {
+      display: block;
+      width: 350px;
+    }
+  
+    .article-body {
+      padding-inline: 1.5rem;
+      padding-block: 1.5rem;
+    }
+  
+    .article-body h2 {
+      margin-top: 0.8rem;
+    }
+  
+    .article-summary {
+      margin-top: 1rem;
+    }
+  
+    .button {
+      margin-top: 1rem;
+    }
+  
+    .attribution {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
